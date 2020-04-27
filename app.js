@@ -5,10 +5,17 @@ const views = require('koa-views');
 const session = require('koa-session');
 const koajwt = require('koa-jwt');
 const jwt = require('jsonwebtoken');
-
+const bodyparser = require('koa-bodyparser')
 const { resolve } = require('path');
+
+
 const app = new Koa();
 const router = new Router();
+
+
+
+// 解析post参数
+app.use(bodyparser())
 
 // 配置session
 app.keys = ['some secret hurr'];
