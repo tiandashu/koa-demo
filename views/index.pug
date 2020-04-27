@@ -1,0 +1,15 @@
+html
+  head
+    title #{title}
+    link(rel="stylesheet", href="css/index.css")
+  body
+    h1 #{text}
+    a(href='https://pugjs.bootcss.com/language/attributes.html') pug 文档
+    if kw
+      p kw is #{kw}
+    else
+      p no kw
+      p #{session}
+    ul
+      each val in list
+        li #{val.name}
